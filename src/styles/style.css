@@ -84,36 +84,34 @@ input[name='rad'] {
   font-family: Roboto, sans-serif;
   font-size: 1.5rem;
 }
-#radio-one:checked ~ .switch .label:nth-child(1) span {
-  background-color: rgb(69, 74, 72);
-  border: 0.2rem solid rgb(69, 74, 72);
-}
-#radio-two:checked ~ .switch .label:nth-child(2) span {
-  border: 0.2rem solid rgb(69, 74, 72);
-  background-color: rgb(69, 74, 72);
-}
-#radio-three:checked ~ .switch .label:nth-child(3) span {
-  border: 0.2rem solid rgb(69, 74, 72);
-  background-color: rgb(69, 74, 72);
-}
+#radio-one:checked ~ .switch .label:nth-child(1) span,
+#radio-two:checked ~ .switch .label:nth-child(2) span,
+#radio-three:checked ~ .switch .label:nth-child(3) span,
 #radio-four:checked ~ .switch .label:nth-child(4) span {
-  border: 0.2rem solid rgb(69, 74, 72);
   background-color: rgb(69, 74, 72);
+  border: 0.2rem solid rgb(69, 74, 72);
+}
+#radio-one:checked ~ .switch .label:nth-child(1):hover span,
+#radio-two:checked ~ .switch .label:nth-child(2):hover span,
+#radio-three:checked ~ .switch .label:nth-child(3):hover span,
+#radio-four:checked ~ .switch .label:nth-child(4):hover span {
+  background-color: rgba(109, 116, 113);
+  border: 0.2rem solid rgba(109, 116, 113);
 }
 
 /* Mobile */
 @media screen and (max-width: 52rem) {
   .switch {
     margin: 0 auto;
-    margin-top: -10.5rem;
-    width: 60%;
+    margin-top: -10rem;
+    width: 70%;
     display: flex;
     justify-content: center;
     gap: 0.5rem;
   }
   .slider-wrapper {
     overflow: hidden;
-    width: 60%;
+    width: 70%;
     height: 30rem;
     margin: 0 auto;
     margin-top: 1rem;
@@ -121,7 +119,7 @@ input[name='rad'] {
   .slide img {
     width: 100%;
     height: 60%;
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
     border-radius: 1rem;
   }
 }
